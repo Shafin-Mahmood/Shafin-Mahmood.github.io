@@ -20,10 +20,12 @@ body {
     height: 100vh;
     text-align: center;
     position: relative;
+    flex-direction: column; /* Stack elements vertically for mobile */
 }
 
 .content {
     animation: fadeIn 2s ease-out forwards;
+    width: 90%; /* Adjust content width for mobile */
 }
 
 h1 {
@@ -63,6 +65,26 @@ h1 {
     100% { opacity: 1; transform: translateY(0); }
 }
 
+/* Button styles */
+.buttons {
+    margin: 20px 0; /* Add margin around buttons */
+}
+
+.buttons a {
+    display: inline-block;
+    background-color: #007bb5; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s; /* Smooth background change */
+    margin: 5px; /* Space between buttons */
+}
+
+.buttons a:hover {
+    background-color: #005f8a; /* Darker background on hover */
+}
+
 /* General mobile adjustments for screens 768px and below */
 @media screen and (max-width: 768px) {
     body {
@@ -82,20 +104,21 @@ h1 {
     }
 
     .bio {
-        font-size: 0.9em; /* Make the bio slightly smaller */
-        margin: 0.5em 0; /* Reduce the margin for bio */
+        font-size: 0.4em; /* Make the bio slightly smaller */
+        margin: 0.2em 0; /* Reduce the margin for bio */
     }
 
     .buttons a {
-        padding: 8px 12px; /* Reduce button padding */
+        padding: 4px 8px; /* Reduce button padding */
         font-size: 0.9em; /* Decrease font size on buttons */
         margin: 5px; /* Adjust margin for buttons */
     }
 
     .profile-pic {
-        width: 80%; /* Make the profile picture responsive */
+        width: 40%; /* Make the profile picture responsive */
         height: auto; /* Maintain aspect ratio */
         margin-top: 20px; /* Add margin for spacing */
+        border-radius: 50%; /* Make profile picture circular */
     }
 }
 
@@ -131,57 +154,5 @@ h1 {
 
     .text-section {
         max-width: 100%; /* Allow text section to take full width */
-    }
-}
-
-/* Android-specific styles for screens 600px and below */
-@media screen and (max-width: 600px) {
-    body {
-        padding: 5px; /* Add smaller padding to body */
-    }
-
-    h1 {
-        font-size: 1.8em; /* Adjust heading size for smaller screens */
-    }
-
-    .slogan {
-        font-size: 0.85em; /* Adjust slogan size */
-    }
-
-    .subtitle {
-        font-size: 0.9em; /* Adjust subtitle size */
-    }
-
-    .bio {
-        font-size: 0.75em; /* Adjust bio size */
-    }
-
-    .buttons a {
-        padding: 5px 8px; /* Further reduce button padding */
-        font-size: 0.8em; /* Further reduce font size */
-    }
-}
-
-/* Android-specific styles for screens 360px and below */
-@media screen and (max-width: 360px) {
-    h1 {
-        font-size: 1.5em; /* Further reduce heading size */
-    }
-
-    .slogan {
-        font-size: 0.75em; /* Further reduce slogan size */
-    }
-
-    .subtitle {
-        font-size: 0.85em; /* Further reduce subtitle size */
-    }
-
-    .bio {
-        font-size: 0.7em; /* Further reduce bio size */
-    }
-
-    .buttons a {
-        padding: 4px 6px; /* Further reduce button padding */
-        font-size: 0.75em; /* Further reduce font size */
     }
 }
