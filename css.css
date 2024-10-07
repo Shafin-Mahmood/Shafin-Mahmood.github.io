@@ -62,3 +62,73 @@ h1 {
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
 }
+/* General mobile adjustments for screens 768px and below */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px; /* Add padding to the body */
+    }
+
+    h1 {
+        font-size: 2em; /* Reduce the size of the main heading */
+    }
+
+    .slogan {
+        font-size: 1em; /* Adjust the slogan size */
+    }
+
+    .subtitle {
+        font-size: 1.2em; /* Adjust the subtitle size */
+    }
+
+    .bio {
+        font-size: 0.9em; /* Make the bio slightly smaller */
+        margin: 0.5em 0; /* Reduce the margin for bio */
+    }
+
+    .buttons a {
+        padding: 8px 12px; /* Reduce button padding */
+        font-size: 0.9em; /* Decrease font size on buttons */
+        margin: 5px; /* Adjust margin for buttons */
+    }
+
+    .profile-pic {
+        width: 80%; /* Make the profile picture responsive */
+        height: auto; /* Maintain aspect ratio */
+        margin-top: 20px; /* Add margin for spacing */
+    }
+}
+
+/* Smaller mobile screens for screens 480px and below */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.6em; /* Further reduce heading size */
+    }
+
+    .slogan {
+        font-size: 0.9em; /* Further reduce slogan size */
+    }
+
+    .subtitle {
+        font-size: 1em; /* Further reduce subtitle size */
+    }
+
+    .bio {
+        font-size: 0.8em; /* Further reduce bio size */
+    }
+
+    .buttons a {
+        padding: 6px 10px; /* Further reduce button padding */
+        font-size: 0.85em; /* Further decrease font size */
+    }
+
+    /* Stack buttons vertically for very small screens */
+    .buttons {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center; /* Center align buttons */
+    }
+
+    .text-section {
+        max-width: 100%; /* Allow text section to take full width */
+    }
+}
