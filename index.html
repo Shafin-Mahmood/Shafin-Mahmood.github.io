@@ -64,6 +64,7 @@
             height: 100vh;
             text-align: left;
             padding: 0 50px;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
         }
 
         .text-section {
@@ -124,12 +125,21 @@
         }
 
         .profile-pic {
-            border-radius: 100%;
+            border-radius: 50%; /* Make the container circular */
             width: 500px;
             height: 500px;
-            margin-left: -120px; /* Moved image further to the left */
+            overflow: hidden; /* Ensure overflow is hidden */
             border: 5px solid navy; /* Navy blue border */
             animation: zoomIn 2s ease-out forwards;
+            display: flex; /* Center the image within the circle */
+            justify-content: center; /* Center the image */
+            align-items: center; /* Center the image */
+        }
+
+        .profile-pic img {
+            width: 100%; /* Make the image take full width of the container */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 50%; /* Make the image circular */
         }
 
         /* Animations */
@@ -162,6 +172,42 @@
             0% { opacity: 0; transform: translateX(-100%); }
             100% { opacity: 1; transform: translateX(0); }
         }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack elements vertically */
+                align-items: center; /* Center align items */
+                padding: 20px; /* Add padding */
+            }
+
+            .text-section {
+                max-width: 100%; /* Full width on mobile */
+                text-align: center; /* Center text */
+                align-items: center; /* Center align content */
+            }
+
+            h1 {
+                font-size: 2.5em; /* Smaller heading */
+            }
+
+            .slogan,
+            .subtitle,
+            .bio {
+                font-size: 1.2em; /* Smaller font size */
+            }
+
+            .profile-pic {
+                width: 300px; /* Smaller profile picture */
+                height: 300px; /* Maintain aspect ratio */
+            }
+
+            .buttons a {
+                margin: 10px 0; /* Stack buttons vertically */
+                width: 100%; /* Full width buttons */
+                text-align: center; /* Center align button text */
+            }
+        }
     </style>
 </head>
 <body>
@@ -186,19 +232,17 @@
             <div class="buttons">
                 <a href="details.html">About Me</a>
                 <a href="https://peach-lynnea-73.tiiny.site/" class="btn">Check CV</a>
-                <a href="https://github.com/Shafin-Mahmood" class="btn github-btn">GitHub</a><br><br><br>
+                <a href="https://github.com/Shafin-Mahmood" class="btn github-btn">GitHub</a><br><br>
                 <a href="mailto:shafin26103@gmail.com">Email Me</a>
                 <a href="https://wa.me/8801612615689" class="btn">WhatsApp</a>
-                <a href="https://www.linkedin.com/in/shafin-mahmood-0932b3284/" class="btn github-btn">LinkdIn</a>
+                <a href="https://www.linkedin.com/in/shafin-mahmood-90045a224/" class="btn">LinkedIn</a>
             </div>
         </div>
-
         <!-- Right side image -->
-        <div class="profile-pic-container">
-            <img src="img/apurbo.jpg" alt="Profile Picture" class="profile-pic">
+        <div class="profile-pic">
+            <img src="/img/apurbo.jpg" alt="Profile Picture" class="img-fluid"> <!-- img-fluid for responsive image -->
         </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-rbsA2VBK4jV0qL1mYhZqB+f8HZH4ZV8Dgf3F3O0TO1L7xt6I6zjq6X+9AVc9MxUs" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-OgVRu0I+06yfC1eK/1p68F7e0bR8rG7U77+i3B6LTp3D6ovPe6xGZhx5yzE5P1tR" crossorigin="anonymous"></script>
 </body>
 </html>
