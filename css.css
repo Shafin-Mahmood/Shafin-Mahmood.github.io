@@ -62,6 +62,7 @@ h1 {
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
 }
+
 /* General mobile adjustments for screens 768px and below */
 @media screen and (max-width: 768px) {
     body {
@@ -130,5 +131,57 @@ h1 {
 
     .text-section {
         max-width: 100%; /* Allow text section to take full width */
+    }
+}
+
+/* Android-specific styles for screens 600px and below */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 5px; /* Add smaller padding to body */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Adjust heading size for smaller screens */
+    }
+
+    .slogan {
+        font-size: 0.85em; /* Adjust slogan size */
+    }
+
+    .subtitle {
+        font-size: 0.9em; /* Adjust subtitle size */
+    }
+
+    .bio {
+        font-size: 0.75em; /* Adjust bio size */
+    }
+
+    .buttons a {
+        padding: 5px 8px; /* Further reduce button padding */
+        font-size: 0.8em; /* Further reduce font size */
+    }
+}
+
+/* Android-specific styles for screens 360px and below */
+@media screen and (max-width: 360px) {
+    h1 {
+        font-size: 1.5em; /* Further reduce heading size */
+    }
+
+    .slogan {
+        font-size: 0.75em; /* Further reduce slogan size */
+    }
+
+    .subtitle {
+        font-size: 0.85em; /* Further reduce subtitle size */
+    }
+
+    .bio {
+        font-size: 0.7em; /* Further reduce bio size */
+    }
+
+    .buttons a {
+        padding: 4px 6px; /* Further reduce button padding */
+        font-size: 0.75em; /* Further reduce font size */
     }
 }
