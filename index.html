@@ -8,6 +8,116 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"> 
     <style>
         body {
+            /* Responsive design */
+@media screen and (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .text-section {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .slogan {
+        font-size: 1.2em;
+    }
+
+    .subtitle {
+        font-size: 1.8em;
+    }
+
+    .bio {
+        font-size: 1.1em;
+    }
+
+    .profile-pic {
+        width: 400px;
+        height: 400px;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-section {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .slogan {
+        font-size: 1.2em;
+    }
+
+    .subtitle {
+        font-size: 1.5em;
+    }
+
+    .bio {
+        font-size: 1em;
+        padding: 0 10px;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .buttons {
+        margin-top: 1em;
+        animation: fadeInButtons 5s ease-out forwards;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .slogan {
+        font-size: 1em;
+    }
+
+    .subtitle {
+        font-size: 1.2em;
+    }
+
+    .bio {
+        font-size: 0.9em;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+
+    .buttons a {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+            
+            
+            
+            
+            
+            
             margin: 0;
             font-family: 'Poppins', sans-serif;
             background: #0d0d0d;
